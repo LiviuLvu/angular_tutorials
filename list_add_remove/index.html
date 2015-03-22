@@ -1,0 +1,23 @@
+<html ng-app="nameApp">
+    <head>
+        <title>Angular examples</title>
+        
+    </head>
+    <body ng-controller="NameController">
+        <h1>Making a Interactive List</h1>
+        
+        <ul>
+            <li ng-repeat="name in names">{{ name }}
+                <a href="" ng-click="removeName(name)">click to remove</a>
+            </li>
+            
+        </ul>
+        
+        <form ng-submit="addName()">
+            <input type="text" ng-model="enterName">
+            <input type="submit" value="add">
+        </form>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+        <script src="script/app.js"></script>
+    </body>

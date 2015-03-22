@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular.js Practice</title>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.4.7/css/foundation.css">
+       
+    </head>
+    <body ng-controller="Ctrl">
+
+        <button ng-click="$storage.x = $storage.x + 1">{{$storage.x}}</button> * <button ng-click="$storage.y = $storage.y + 1">{{$storage.y}}</button> = {{$storage.x * $storage.y}}
+        <hr>
+        <button ng-click="deleteX()">Delete $scope.$storage.x</button> | <button ng-click="deleteY()">Delete $localStorage.y</button>
+
+
+        
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>
+        <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+        <script src="app/app.js"></script>
+    </body>
+</html>

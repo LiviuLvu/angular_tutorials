@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Learning Angular.js</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.4.7/css/foundation.css">
+<!--        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+</head>
+<body>
+    <div ng-controller="FirstCtrl">
+<!--
+        <input type="text" ng-model="data.message">
+        <h1>{{ data.message }}</h1>
+-->
+
+        <div ng-controller="FirstCtrl">
+            <input type="text" ng-model="data.message">
+            <h1>{{ data.message }}</h1>
+        </div>
+
+        <div ng-controller="SecondCtrl">
+            <input type="text" ng-model="data.message">
+            <h1>{{ data.message }}</h1>
+            <h1>{{ reversedMessage(data.message) }}</h1>
+        </div>
+    </div>
+
+    <script type="text/javascript" src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

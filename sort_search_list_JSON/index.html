@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="countryApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular.js Practice</title>
+    </head>
+    <body ng-controller="CountryController">
+        <h1>Fetching JSON, http request</h1>
+        
+<!--<p>Add search using Angular.js filters</p>-->
+        Search:<input ng-model="query" type="text" />
+
+        <table>
+            <tr>
+<!--sort on click and reverse sort order-->
+                <th><a href="" ng-click="sortfield = 'name'; reverse = !reverse ">Country</a></th>
+                <th><a href="" ng-click="sortfield = 'population'; reverse = !reverse ">Population</a></th>
+            </tr>
+<!-- use filter to search, and orderBy-->
+            <tr ng-repeat="country in countries | filter:query | orderBy:sortfield:reverse"> 
+                <td>{{ country.name }}</td>
+                <td>{{ country.population }}</td>
+            </tr>
+        </table>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+        <script src="app/app.js"></script>
+    </body>
+</html>

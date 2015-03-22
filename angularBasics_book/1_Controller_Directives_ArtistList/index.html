@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Angular.js Practice</title>
+</head>
+<body ng-controller="abMainCtrl">
+    
+    Limit to this search value : <input ng-model="search"></input>
+    
+    <h1>Display Option 1:</h1>
+    
+    <div ng-repeat="Album in Albums" | filter:search >
+        {{Album.Name}} by {{Album.Artist}} in {{Album.Year}} 
+    </div>
+    <br/>
+    
+    <h1>Display Option 2:</h1>
+    
+    <div ab-album ng-repeat="Album in Albums | filter:search track by Album.Name"
+         name="{{Album.Name}}" artist="{{Album.Artist}}" year="{{Album.Year}}">
+    </div>
+    
+    <h1>Display Option 3:</h1>
+    
+    <table>
+        <tr>
+            <th><a href="" ng-click="column='Name';   reverse=!reverse">Album</a></th>
+            <th><a href="" ng-click="column='Artist'; reverse=!reverse">Artist</a></th>
+            <th><a href="" ng-click="column='Year';   reverse=!reverse">Year</a></th>
+        </tr>
+        <tr ab-album ng-repeat="Album in Albums | filter:search | orderBy:column:reverse track by Album.Name"
+            name="{{Album.Name}}" artist="{{Album.Artist}}" year="{{Album.Year}}">
+        </tr>
+        <tr ab-album-edit ng-repeat="Album in Albums track by Album.Name"
+            name="Album.Name" artist="Album.Artist" year="Album.Year">
+        </tr>
+        <tr>
+            <td><input ng-model="search.Name" autofocus></input></td>
+            <td><input ng-model="search.Artist"></input></td>
+            <td><input ng-model="search.Year"></input></td>
+        </tr>
+    </table>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/ng-template" id="Album.html">
+    <tr><td>"{{name}}"</td><td>{{artist}}</td><td>{{year}}</td></tr>
+    </script>
+    <script type="text/ng-template" id="AlbumEdit.html">
+            <tr><td><input ng-model="name" /></td>
+                <td><input ng-model="artist" /></td>
+                <td><input ng-model="year" /></td></tr>
+    </script>
+
+</body>
+</html>

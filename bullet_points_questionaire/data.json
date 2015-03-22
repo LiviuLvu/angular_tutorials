@@ -1,0 +1,27 @@
+[
+    {
+        "identifier": "1a",
+        "question": "Să iau hotărâri după ce ştiu ce gândesc şi ceilalţi"
+    },
+    {
+        "identifier": "1b",
+        "question": "Să iau decizii singur, fără să-i consult pe ceilalţi"
+    },
+    {
+        "identifier": "2a",
+        "question": "Să fiu considerat un tip intuitiv, cu imaginaţie"
+    },
+    {
+        "identifier": "2b",
+        "question": "Să fiu considerat un om al faptelor, cu picioarele pe pământ"
+    },
+    {
+        "identifier": "3a",
+        "question": "Să iau hotărâri bazându-mă pe datele problemei şi pe o analiză sistematică a situaţiei"
+    },
+    {
+        "identifier": "3b",
+        "question": "Să iau hotărâri bazându-mă pe ce simt şi pe înţelegerea nevoilor oamenilor"
+    }
+
+]

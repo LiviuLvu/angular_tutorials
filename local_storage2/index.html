@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular.js Practice</title>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.4.7/css/foundation.css">
+       
+    </head>
+    <body>
+
+        <div ng-controller="ExampleController">
+            <button ng-click="save()">Save</button>
+            <button ng-click="load()">Load</button>
+            <br>
+            {{data}}
+        </div>
+        
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>
+        <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+        <script src="app/app.js"></script>
+    </body>
+</html>

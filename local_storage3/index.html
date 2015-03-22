@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular.js Practice</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    </head>
+    
+    <body ng-controller="Ctrl">
+        <button ng-click="x()">{{$storage.x}}</button> + <button ng-click="$storage.y = $storage.y + 1">{{$storage.y}}</button> = {{$storage.x + $storage.y}}
+        <hr>
+        <button ng-click="deleteX()">Delete $scope.$storage.x</button> | <button ng-click="deleteY()">Delete $localStorage.y</button>
+        <hr>
+        <button ng-click="$storage.$reset({
+                          x: 999
+                          })">Clear localStorage</button>
+        
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+        <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+        <script src="app/app.js"></script>
+    </body>
+</html>
