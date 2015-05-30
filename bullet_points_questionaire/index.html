@@ -2,7 +2,7 @@
 <html ng-app="myApp">
     <head>
         <meta charset="utf-8">
-        <title>PSIHOTEST: M.B.T.I.</title>
+        <title>bullet points questionaire</title>
         <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.4.7/css/foundation.css">
 <!--        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
     </head>
@@ -10,7 +10,7 @@
         <h4 class="panel">
             Selectaţi de la 1 la 5 puncte, proporţional cu măsura în care acestea sunt conforme cu modul Dvs. de a fi şi de a vă comporta.
         </h4> 
-        <div ng-repeat="question in qList" >
+        <div ng-repeat="question in qList">
          
             <table border="1" style="width:100%">
                 <tr>
@@ -27,8 +27,11 @@
                         Raspuns: {{select.value}}
                     </td>
                 </tr>
-            </table>            
+            </table>
+            
+<!--            how to get values from ng-repeat?-->
         </div>
+        <div ng-model="qList">{{select.value}}</div>
 
 
     

@@ -1,0 +1,16 @@
+<!-- class="series_img"-->
+<img ng-src="{{listing.series_img}}" class="col-md-3">
+<div class="col-md-6">
+    <h1 class="series">{{listing.series}}</h1>
+    <h2 class="episode">{{listing.episode}}</h2>
+    <p class="description">{{listing.description}}</p>
+</div>
+<div class="col-md-3">
+    <ul class="list-group">
+        <li class="list-group-item"><span>Date: {{listing.datetime | date:"longDate"}}</span> </li>
+        <li class="list-group-item"><span>On air: {{listing.datetime | date:"EEEE"}}</span> </li>
+        <li class="list-group-item"><span>Time: {{listing.datetime | date:"shortTime"}}</span> </li>
+        <li class="list-group-item"><span>Season:</span>{{listing.season}}</li>
+        <li class="list-group-item"><span>Genre:</span> {{listing.genre}} </li>
+    </ul>
+</div>
